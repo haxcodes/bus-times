@@ -27,12 +27,14 @@ var x = document.getElementById("current-location");
 
 
 var closestStop = function(currentPos) {
+    
+    console.log(currentPos)
     $.ajax({
       url: "https://vodafonebus.nanoscaleapi.io/closest_stop",
       method: "POST",
       data: currentPos
-    }).done(function(data) {
-      x.innerHTML = data;
+    }).done(function(res) {
+      x.innerHTML = res;
     });
 }
 
@@ -48,7 +50,7 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
   
-  closestStop(crd);
+  closestStop({longitude: crd.longitude, latitude: crd.latitude});
 
   console.log('Your current position is:');
   console.log(`Latitude : ${crd.latitude}`);

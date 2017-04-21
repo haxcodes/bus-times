@@ -2,19 +2,19 @@
 <html>
 <body>
 
-<p>You are at</p>
+<p>The next bus is due in</p>
 
 
-<h1 id="current-location"></h1>
+<h1 id="next-bus"></h1> minutes
 
-<button onclick="getLocation()">Refresh</button>
+<button onclick="getNextBus()">Refresh</button>
 
 
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<script src="location.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  
+<!--<script src="location.js"></script>-->
+<script src="bustimes.js"></script>
 
 </body>
 </html>
